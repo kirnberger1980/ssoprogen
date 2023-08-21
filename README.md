@@ -2,6 +2,11 @@
 
 This tiny CLI Tool helps you creating AWS Profiles based on your AWS SSO (AWS IAM Identity Center) Account Assignments. Especially if you have to manage plenty of AWS Accounts using various IAM Roles, `ssoprofilegen` will quickly create all neccessary profiles for your `~/.aws/config` file.
 
+- [SSO Profile Generator](#sso-profile-generator)
+  - [Prerequisites](#prerequisites)
+  - [Usage](#usage)
+
+
 ## Prerequisites
 
 In order to use `ssoprofilegen` properly , you need to have an access token, which is created by the the identity provider of AWS SSO. Therefore you need the initial configuration in your `~/.aws/config` file:
