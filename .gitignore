@@ -43,3 +43,6 @@ web_modules/
 
 # TypeScript cache
 *.tsbuildinfo\
+
+# dist
+dist/*/**
