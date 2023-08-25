@@ -1,7 +1,5 @@
 # SSO Profile Generator
 
-[![Dependencies](https://img.shields.io/librariesio/github/depcheck/depcheck)](https://libraries.io/github/kirnberger1980/ssoprogen)
-
 - [SSO Profile Generator](#sso-profile-generator)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
