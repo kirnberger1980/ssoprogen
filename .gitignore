@@ -25,6 +25,7 @@ coverage
 # Dependency directory
 node_modules
 bower_components
+jspm_packages/
 
 # Editors
 .idea
@@ -34,8 +35,11 @@ bower_components
 .DS_Store
 Thumbs.db
 
-# Ignore built ts files
-dist/**/*
-
 # ignore yarn.lock
 yarn.lock
+
+# Snowpack dependency directory (https://snowpack.dev/)
+web_modules/
+
+# TypeScript cache
+*.tsbuildinfo\

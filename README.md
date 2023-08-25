@@ -1,15 +1,17 @@
 # SSO Profile Generator
 
-This tiny CLI Tool helps you creating AWS Profiles based on your AWS SSO (AWS IAM Identity Center) Account Assignments. Especially if you have to manage plenty of AWS Accounts using various IAM Roles, `ssoprofilegen` will quickly create all neccessary profiles for your `~/.aws/config` file.
+[![Dependencies](https://img.shields.io/librariesio/github/depcheck/depcheck)](https://libraries.io/github/kirnberger1980/ssoprogen)
 
 - [SSO Profile Generator](#sso-profile-generator)
   - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
   - [Usage](#usage)
 
+This tiny CLI Tool helps you creating AWS Profiles based on your AWS SSO (AWS IAM Identity Center) Account Assignments. Especially if you have to manage plenty of AWS Accounts using various IAM Roles, `ssoprogen` will quickly create all neccessary profiles for your `~/.aws/config` file.
 
 ## Prerequisites
 
-In order to use `ssoprofilegen` properly , you need to have an access token, which is created by the the identity provider of AWS SSO. Therefore you need the initial configuration in your `~/.aws/config` file:
+In order to use `ssoprogen` properly , you need to have an access token, which is created by the the identity provider of AWS SSO. Therefore you need the initial configuration in your `~/.aws/config` file:
 
 ```properties
 [sso-session sso]
@@ -29,18 +31,31 @@ aws sso login
 
 This will open the browser and you have to authenticate against the identity provider from AWS SSO (AWS IAM Identity Center). For more details, follow the instructions on [Configure automatic token refresh](https://docs.aws.amazon.com/cli/latest/userguide/sso-configure-profile-token.html).
 
+## Installation
+
+```
+npm install -g ssoprogen
+```
+
+Or simply using [npx](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) which is a package runner bundled in `npm`:
+
+```
+npx ssoprogen
+```
+
+
 ## Usage
 
 There are two ways to create the neccesssary AWS profiles for your AWS CLI (`~/.aws/config`). With the following command you print out all available profiles for the user:
 
 ```bash
-ssoprofilegen -c
+ssoprogen -c
 ```
 
 You then have to copy the profiles manually in to your `~/.aws/config` file. Caution: The tool will create the sso session and the default profile as well. If you prefer to overwrite `~/.aws/config` file directly, then you can perform:
 
 ```bash
-ssoprofilegen -p
+ssoprogen -p
 ```
 
 If you have more than one IAM Role in an account, the profile name will be
@@ -68,20 +83,20 @@ cli_pager=cat
 **Hint:** If your region for your AWS profiles differs from the region of the SSO instance, you can simply provide the region as follows:
 
 ```bash
-ssoprofilegen -p -r "eu-central-1"
+ssoprogen -p -r "eu-central-1"
 ```
 
 Furthermore you have the following options:
 
 ```bash
-user@yourhost>ssoprofilegen -h
+user@yourhost>ssoprogen -h
   ____ ____   ___    ____             __ _ _         ____                           _             
  / ___/ ___| / _ \  |  _ \ _ __ ___  / _(_) | ___   / ___| ___ _ __   ___ _ __ __ _| |_ ___  _ __ 
  \___ \___ \| | | | | |_) | '__/ _ \| |_| | |/ _ \ | |  _ / _ \ '_ \ / _ \ '__/ _` | __/ _ \| '__|
   ___) |__) | |_| | |  __/| | | (_) |  _| | |  __/ | |_| |  __/ | | |  __/ | | (_| | || (_) | |   
  |____/____/ \___/  |_|   |_|  \___/|_| |_|_|\___|  \____|\___|_| |_|\___|_|  \__,_|\__\___/|_|   
                                                                                                   
-Usage: ssoprofilegen [options]
+Usage: ssoprogen [options]
 
 A CLI for generating Configuration File with AWS SSO Profiles for AWS CLI etc. based on AWS SSO.
 
