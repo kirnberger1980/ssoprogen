@@ -1,5 +1,6 @@
 # SSO Profile Generator
 
+[![Build Status](https://github.com/kirnberger1980/ssoprogen/actions/workflows/publish.yml/badge.svg)](https://github.com/kirnberger1980/ssoprogen/actions/workflows/publish.yml)
 [![License: Apache2](https://img.shields.io/badge/license-Apache%202-lightgrey.svg)](http://www.apache.org/licenses/)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 [![NPM Version](http://img.shields.io/npm/v/ssoprogen.svg?style=flat)](https://www.npmjs.org/package/ssoprogen)
