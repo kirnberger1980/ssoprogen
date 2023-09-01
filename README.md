@@ -5,9 +5,7 @@
   - [Prerequisites](#prerequisites)
   - [Usage](#usage)
 
-<br/>
 <img src="./static/ssoprogen.png" alt="Image Description" width="10%" height="10%" />
-<br/><br/>
 
 This tiny CLI Tool helps you creating AWS Profiles based on your AWS SSO (AWS IAM Identity Center) Account Assignments. Especially if you have to manage plenty of AWS Accounts using various IAM Roles, `ssoprogen` will quickly create all neccessary profiles for your `~/.aws/config` file.
 

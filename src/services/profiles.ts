@@ -48,11 +48,14 @@ function getAssumeProfile(accountRoles: AccountRoles, profileRegion: string, def
 
 export function populateAwsConfigFile(profiles: string) {
   const configFile = `${HOME_DIR}/.aws/config`;
+  const bakFile = `${HOME_DIR}/.aws/config.${Date.now()}`;
+  fs.renameSync(configFile, bakFile);
+  console.log(`💾 Backed up existing config file to ${bakFile}.\n`);
   try {
     fs.writeFileSync(configFile, profiles, { encoding: "utf8" });
-    console.log(`Successfully populated config file ${configFile}.`);
+    console.log(`✅ Successfully populated config file ${configFile}.`);
   } catch (error) {
-    console.log("Error populating config file.");
+    console.log("❌ Error populating config file.");
     process.exit(1);
   }
 }

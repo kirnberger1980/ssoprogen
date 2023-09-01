@@ -24,7 +24,7 @@ export async function getSsoDetails() {
       startUrl
     }
   } catch (error) {
-    console.log("Error getting credentials. Please run 'aws sso login' first.");
+    console.log("🟡 No valid credentials found. Please run 'aws sso login' first.");
     process.exit(1);
   }
   return ssoDetails;

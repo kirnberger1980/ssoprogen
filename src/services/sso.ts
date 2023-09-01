@@ -14,7 +14,7 @@ export async function getAccountsWithRoles(accessToken: string, region?: string)
       accountName: account.accountName || "",
       roles
     });
-    await sleep(500);
+    await sleep(200);
   }
   return accountRoles;
 }
@@ -35,10 +35,10 @@ async function getAccounts(accessToken: string, client: SSOClient) {
     if (accountInfos.length > 0) {
       return accountInfos;
     }
-    console.log("Warning. No accounts found which are assigned to you. Contact your administrator.");
+    console.log("🟡 Warning. No accounts found which are assigned to you. Contact your administrator.");
     process.exit(1);
   } catch (error) {
-    console.log("Error getting accounts.");
+    console.log("❌ Error getting accounts.");
     process.exit(1);
   }
 }
@@ -64,14 +64,14 @@ async function getRolesForAccount(account: string, accessToken: string, client: 
       });
       return roles;
     }
-    console.log("No IAM roles found for assigned accounts. Contact your administrator.");
+    console.log("❌ No IAM roles found for assigned accounts. Contact your administrator.");
     process.exit(1);
   } catch (error) {
     if (error instanceof Error) {
       if (error.message.includes("429")) {
-        console.log("Error getting roles. Too many requests against AWS SSO API. Please try again later.");
+        console.log("❌ Error getting roles. Too many requests against AWS SSO API. Please try again later.");
       } else {
-        console.log("Error getting roles. " + error.message);
+        console.log("❌ Error getting roles. " + error.message);
       }
     }
     process.exit(1);
