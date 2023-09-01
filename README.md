@@ -1,8 +1,9 @@
 # SSO Profile Generator
 
-[![Build Status](https://github.com/github/docs/actions/workflows/publish.yml/badge.svg)
+[![License: Apache2](https://img.shields.io/badge/license-Apache%202-lightgrey.svg)](http://www.apache.org/licenses/)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 [![NPM Version](http://img.shields.io/npm/v/ssoprogen.svg?style=flat)](https://www.npmjs.org/package/ssoprogen)
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=ssoprogen%20-%20Simply%20create%20AWS%20Profiles%20for%20your%20AWS%20config%20file.%20&url=https://github.com/kirnberger1980/ssoprogen&hashtags=aws,sso,profiles)
 
 - [SSO Profile Generator](#sso-profile-generator)
   - [Installation](#installation)
