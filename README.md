@@ -1,6 +1,6 @@
 # SSO Profile Generator
 
-[![Build Status](https://github.com/kirnberger1980/ssoprogen/workflows/build/badge.svg)](https://github.com/kirnberger1980/ssoprogen/actions?query=workflow%3A%22build%22)
+[![Build Status](https://github.com/github/docs/actions/workflows/publish.yml/badge.svg)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 [![NPM Version](http://img.shields.io/npm/v/ssoprogen.svg?style=flat)](https://www.npmjs.org/package/ssoprogen)
 
