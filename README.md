@@ -1,11 +1,27 @@
 # SSO Profile Generator
 
 - [SSO Profile Generator](#sso-profile-generator)
-  - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+  - [Prerequisites](#prerequisites)
   - [Usage](#usage)
 
+<br/>
+<img src="./static/ssoprogen.png" alt="Image Description" width="10%" height="10%" />
+<br/><br/>
+
 This tiny CLI Tool helps you creating AWS Profiles based on your AWS SSO (AWS IAM Identity Center) Account Assignments. Especially if you have to manage plenty of AWS Accounts using various IAM Roles, `ssoprogen` will quickly create all neccessary profiles for your `~/.aws/config` file.
+
+## Installation
+
+```
+npm install -g ssoprogen
+```
+
+Or simply using [npx](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) which is a package runner bundled in `npm`:
+
+```
+npx ssoprogen
+```
 
 ## Prerequisites
 
@@ -28,19 +44,6 @@ aws sso login
 ```
 
 This will open the browser and you have to authenticate against the identity provider from AWS SSO (AWS IAM Identity Center). For more details, follow the instructions on [Configure automatic token refresh](https://docs.aws.amazon.com/cli/latest/userguide/sso-configure-profile-token.html).
-
-## Installation
-
-```
-npm install -g ssoprogen
-```
-
-Or simply using [npx](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) which is a package runner bundled in `npm`:
-
-```
-npx ssoprogen
-```
-
 
 ## Usage
 
